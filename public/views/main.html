@@ -1,3 +1,21 @@
 <div>
 <h1>Page under construction by {{name}}</h1>
+<div class="container">
+<table class="table table-hover">
+<thead>
+<tr>
+<th>Product Id</th>
+<th>Product Name</th>
+<th>Price</th>
+<th>Currency</th>
+</tr>
+</thead>
+<tbody>
+<tr ng-repeat="product in products">
+<td>{{product.productId}}</td>
+</tr>
+</tbody>
+</table>
+
+</div>
 </div>

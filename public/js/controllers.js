@@ -8,16 +8,9 @@ myretailControllers.controller('headerController',
 
 		$http({
 			method:'GET',
-			url:'/personal/Maremalla'
+			url:'https://myretail-services.herokuapp.com/products'
 		}).then(function(response){
-			$scope.lname=response.data.lname;
-			$scope.fname=response.data.fname;
-			$scope.title=response.data.title;
-			$scope.phone=response.data.phone;
-			$scope.email=response.data.email;
-			$scope.picture=response.data.picture;
-			$scope.linkedin=response.data.linkedin;
-			$scope.github=response.data.github;
+			$scope.products = response.data;
 		});
 		
 		$http({
