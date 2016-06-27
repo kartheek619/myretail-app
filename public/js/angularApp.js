@@ -1,4 +1,4 @@
-var app = angular.module('profile', ['profileControllers','ngRoute','appRoutes']);
+var app = angular.module('myretail', ['myretailControllers','ngRoute','appRoutes']);
 
 
 

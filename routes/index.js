@@ -7,8 +7,8 @@ router.get('/home', function(req, res, next) {
 	res.sendFile(path.resolve('views/index.html'));
 });
 
-router.get('/kartheek', function(req, res, next) {
-	var kar ={"name":"kartheek"};
+router.get('/hello', function(req, res, next) {
+	var kar ={"message":"Hello. This is a sample message from Kartheek Maremalla."};
 	res.json(kar);
 	
 });

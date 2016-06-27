@@ -1,12 +1,11 @@
-var profileControllers = angular.module('profileControllers',[]);
+var myretailControllers = angular.module('myretailControllers',[]);
 
-profileControllers.controller('headerController',
+myretailControllers.controller('headerController',
   
     function($scope,$http){
 	
 		$scope.name="kartheek";
-		
-		
+
 		$http({
 			method:'GET',
 			url:'/personal/Maremalla'
