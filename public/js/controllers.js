@@ -8,7 +8,7 @@ myretailControllers.controller('headerController',
 
 		$http({
 			method:'GET',
-			url:'https://myretail-services.herokuapp.com/products'
+			url:"https://myretail-services.herokuapp.com/products"
 		}).then(function(response){
 			$scope.products = response.data;
 		});

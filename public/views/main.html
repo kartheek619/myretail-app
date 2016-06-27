@@ -13,6 +13,9 @@
 <tbody>
 <tr ng-repeat="product in products">
 <td>{{product.productId}}</td>
+<td>{{product.productName}}</td>
+<td>{{product.currentPrice.value}}</td>
+<td>{{product.currentPrice.currency}}</td>
 </tr>
 </tbody>
 </table>
