@@ -15,7 +15,7 @@
 	</thead>
 	<tbody>
 		<tr ng-repeat="product in products">
-			<td>{{product.productId}}</td>
+			<td><a ng-href="products/{{product.productId}}"/>{{product.productId}}</td>
 			<td>{{product.productName}}</td>
 			<td>{{product.currentPrice.value}}</td>
 			<td>{{product.currentPrice.currency}}</td>
