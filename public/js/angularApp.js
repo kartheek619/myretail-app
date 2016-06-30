@@ -1,4 +1,4 @@
-var app = angular.module('myretail', ['myretailControllers','ngRoute','appRoutes']);
+var app = angular.module('myretail', ['myretailControllers','ngRoute','appRoutes','angularModalService']);
 
 app.config(['$httpProvider', function($httpProvider) {
     $httpProvider.defaults.useXDomain = true;
