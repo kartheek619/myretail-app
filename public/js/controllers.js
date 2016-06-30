@@ -2,7 +2,7 @@ var myretailControllers = angular.module('myretailControllers',[]);
 
 myretailControllers.controller('headerController',
 
-		function($scope,$http,$location, ModalService){
+		function($scope,$http,$location){
 
 	$scope.name="kartheek";
 
