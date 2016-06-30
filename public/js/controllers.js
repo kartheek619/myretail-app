@@ -66,3 +66,53 @@ myretailControllers.controller('addProductController',
 	};
 
 });
+
+myretailControllers.controller('editProductController',
+
+		function($scope,$http,$location,$routeParams){
+
+	var productId = $routeParams.productId;
+	var product = {};
+	var currentPrice = {};
+	
+	$http({
+		method:'GET',
+		url:"https://myretail-services.herokuapp.com/products/"+productId
+	}).then(function(response){
+		$scope.productId = response.data.productId;
+		$scope.productName = response.data.productName;
+		$scope.value = response.data.currentPrice.value;
+		$scope.currency = response.data.currentPrice.currency;
+	});
+	
+	$scope.updateProduct = function(){
+		
+		product.productName = $scope.productName;
+		product.productId = $scope.productId;
+		currentPrice.value = $scope.value;
+		currentPrice.currency = $scope.currency;
+		product.currentPrice = currentPrice;
+		
+		$http({
+			method:'PUT',
+			url:"https://myretail-services.herokuapp.com/products/",
+			data: product
+		}).then(function(response){
+			if(response.data.code=="1"){
+				console.log(response);
+				console.log(response.data);
+				$location.path('/');
+			}
+			else{
+				$scope.errorMsg="Error in updating the database. Please try again.";
+			}
+		});
+		
+	};
+	
+	$scope.backToMain = function(){
+		$location.path('/');
+	};
+	
+
+});
