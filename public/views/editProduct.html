@@ -1,0 +1,57 @@
+
+<div class="center">
+
+	<div class="row">
+		<h2>Update a Product in myRetail database</h2>
+	</div>
+
+	<form class="form">
+		<div class="row">
+			<div class="form-group col-xs-4">
+				<label for="productId">Product Id:</label> <input type="text"
+					class="form-control" ng-disabled="true" id="productId" ng-model="productId"
+					placeholder="Product Id">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="form-group col-xs-4">
+				<label for="productName">Product Name:</label> <input type="text"
+					class="form-control" id="productName" ng-model="productName"
+					placeholder="Product Name">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="form-group col-xs-4">
+				<label for="price">Price:</label> <input type="text"
+					class="form-control" id="price" ng-model="value"
+					placeholder="Price">
+			</div>
+		</div>
+
+		<div class="row">
+		<div class="col-xs-1">
+		<label>Currency:</label>
+		</div>
+		<div class="col-xs-4">
+		<label class="radio-inline"><input ng-model="currency" type="radio" name="optradio" ng-value='"USD"'>USD</label> 
+		<label class="radio-inline"><input ng-model="currency" type="radio" name="optradio" ng-value='"INR"'>INR</label> 
+		<label class="radio-inline"><input ng-model="currency" type="radio" name="optradio" ng-value='"AUD"'>AUD</label>
+		<label class="radio-inline"><input ng-model="currency" type="radio" name="optradio" ng-value='"GBP"'>GBP</label>
+		<label class="radio-inline"><input ng-model="currency" type="radio" name="optradio" ng-value='"CAD"'>CAD</label>
+		</div>
+		</div>
+		<div class="row" style="margin-top:20px">
+		<div class="col-xs-4">
+		<button type="submit" ng-click="updateProduct()" class="btn btn-danger">Update</button>
+		<button type="button" ng-click="delete()" class="btn btn-danger">Delete</button>
+		<button type="button" ng-click="backToMain()" class="btn btn-danger">Back
+			To Home</button>
+			</div>
+			</div>
+	</form>
+</div>
+
+<h3 style="color: red">{{errorMsg}}</h3>
+
