@@ -1,0 +1,39 @@
+
+<div class="center">
+
+	<div class="row">
+		<h2>Add a Product to myRetail database</h2>
+	</div>
+
+	<form class="form">
+		<div class="row">
+			<div class="form-group col-xs-4">
+				<label for="productId">Product Id:</label> <input type="text"
+					class="form-control" id="productId" ng-model="productId"
+					placeholder="Product Id">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="form-group col-xs-4">
+				<label for="productName">Product Name:</label> <input type="text"
+					class="form-control" id="productName" ng-model="productName"
+					placeholder="Product Name">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="form-group col-xs-4">
+				<label for="price">Price:</label> <input type="text"
+					class="form-control" id="price" ng-model="value"
+					placeholder="Price">
+			</div>
+		</div>
+		<button type="submit" ng-click="addProduct()" class="btn btn-danger">Save</button>
+		<button type="button" ng-click="reset()" class="btn btn-danger">Reset</button>
+		<button type="button" ng-click="backToMain()" class="btn btn-danger">Back To Home</button>
+	</form>
+</div>
+
+<h3 style="color: red">{{errorMsg}}</h3>
+
