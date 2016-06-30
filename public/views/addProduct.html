@@ -29,9 +29,27 @@
 					placeholder="Price">
 			</div>
 		</div>
+
+		<div class="row">
+		<div class="col-xs-1">
+		<label>Currency:</label>
+		</div>
+		<div class="col-xs-4">
+		<label class="radio-inline"><input ng-model="currency" type="radio" name="optradio" ng-value='"USD"'>USD</label> 
+		<label class="radio-inline"><input ng-model="currency" type="radio" name="optradio" ng-value='"INR"'>INR</label> 
+		<label class="radio-inline"><input ng-model="currency" type="radio" name="optradio" ng-value='"AUD"'>AUD</label>
+		<label class="radio-inline"><input ng-model="currency" type="radio" name="optradio" ng-value='"GBP"'>GBP</label>
+		<label class="radio-inline"><input ng-model="currency" type="radio" name="optradio" ng-value='"CAD"'>CAD</label>
+		</div>
+		</div>
+		<div class="row" style="margin-top:20px">
+		<div class="col-xs-4">
 		<button type="submit" ng-click="addProduct()" class="btn btn-danger">Save</button>
 		<button type="button" ng-click="reset()" class="btn btn-danger">Reset</button>
-		<button type="button" ng-click="backToMain()" class="btn btn-danger">Back To Home</button>
+		<button type="button" ng-click="backToMain()" class="btn btn-danger">Back
+			To Home</button>
+			</div>
+			</div>
 	</form>
 </div>
 
