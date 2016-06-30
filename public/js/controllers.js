@@ -32,7 +32,7 @@ myretailControllers.controller('addProductController',
 		product.productName = $scope.productName;
 		product.productId = $scope.productId;
 		currentPrice.value = $scope.value;
-		currentPrice.currency = "USD";
+		currentPrice.currency = $scope.currency;
 		product.currentPrice = currentPrice;
 
 		$http({
@@ -40,11 +40,15 @@ myretailControllers.controller('addProductController',
 			url:"https://myretail-services.herokuapp.com/products",
 			data: product
 		}).then(function(response){
-			if(response.data.code==="1"){
+			if(response.data.code=="1"){
+				console.log(response);
+				console.log(response.data);
 				$location.path('/');
 			}
 			else{
 				$scope.errorMsg="Error in Saving the database. Please try again.";
+				console.log(response);
+				console.log(response.data);
 			}
 		});
 
