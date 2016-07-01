@@ -110,6 +110,26 @@ myretailControllers.controller('editProductController',
 		
 	};
 	
+	$scope.deleteProduct = function(){
+		
+		$http({
+			method:'DELETE',
+			url:"https://myretail-services.herokuapp.com/products/"+productId
+		}).then(function(response){
+			
+			if(response.data.code=="1"){
+				console.log(response);
+				console.log(response.data);
+				$location.path('/');
+			}
+			else{
+				$scope.errorMsg="Error in deleting the product from database. Please try again.";
+			}
+			
+		});
+		
+	};
+	
 	$scope.backToMain = function(){
 		$location.path('/');
 	};
